@@ -27,6 +27,7 @@ type Function struct {
 	Runtime              string `json:"runtime"`
 	Source               string `json:"source"`
 	Timeout              string `json:"timeout"`
+	ServiceAccount       string `json:"serviceaccount"`
 
 	EnvironmentDelimiter string              `json:"environment_delimiter"`
 	Environment          []map[string]string `json:"environment"`
