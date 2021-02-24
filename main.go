@@ -294,6 +294,9 @@ func CreateExecutionPlan(cfg *Config) (Plan, error) {
 			if f.Timeout != "" {
 				args = append(args, "--timeout", f.Timeout)
 			}
+			if f.ServiceAccount != "" {
+				args = append(args, "--service-account", f.ServiceAccount)
+			}
 			if len(cfg.EnvSecrets) > 0 || len(f.Environment) > 0 {
 				e := make([]string, len(cfg.EnvSecrets))
 				copy(e, cfg.EnvSecrets)
